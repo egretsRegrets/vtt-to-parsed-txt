@@ -1,0 +1,12 @@
+{
+  "name": "interview-parsing",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:egretsRegrets/vtt-to-parsed-txt.git",
+  "author": "<samuel.gardner@nielsen.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

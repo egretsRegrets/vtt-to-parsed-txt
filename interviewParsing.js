@@ -1,4 +1,5 @@
 const fs = require('fs');
+require('dotenv').config();
 
 const interview = fs.readFileSync('./sample-interview.txt', 'utf-8');
 // console.log('raw interview: ', interview);
@@ -6,7 +7,7 @@ const interview = fs.readFileSync('./sample-interview.txt', 'utf-8');
 const newlineSplitInterview = interview.split('\n');
 // console.log('newline split interview: ', newlineSplitInterview);
 
-const speakerIds = ['Clarissa Redwine’s iPhone', 'Taylor Moore'];
+const speakerIds = process.env.DEFAULT_SPEAKERS.split(',');
 
 const interviewSegments = newlineSplitInterview.filter((segment) =>
   speakerIds.some((speaker) => segment.includes(speaker))
